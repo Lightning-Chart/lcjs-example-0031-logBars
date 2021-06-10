@@ -1,6 +1,6 @@
-# Grouped Bars with Logarithmic Y Axis
+# JavaScript Grouped Bars with Logarithmic Y Axis
 
-![Grouped Bars with Logarithmic Y Axis](logBars.png)
+![JavaScript Grouped Bars with Logarithmic Y Axis](logBars.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
