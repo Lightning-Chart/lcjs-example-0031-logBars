@@ -7,14 +7,11 @@ const lcjs = require('@arction/lcjs')
 // Extract required parts from LightningChartJS.
 const {
     lightningChart,
-    LinearGradientFill,
-    ColorHSV,
     AutoCursorModes,
     UIOrigins,
     LegendBoxBuilders,
     AxisTickStrategies,
     emptyLine,
-    emptyFill,
     UIElementBuilders,
     Themes
 } = lcjs
@@ -40,7 +37,7 @@ const productsCount = groupedBarsValues.productNames.length
 // : Plot a Bar Chart using Rectangle Series :
 
 const chart = lightningChart().ChartXY({
-    // theme: Themes.dark
+    // theme: Themes.darkGold
     // Configure Y Axis as logarithmic.
     defaultAxisY: {
         type: 'logarithmic',
@@ -71,17 +68,7 @@ const yAxis = chart.getDefaultAxisY()
 
 // Create one Rectangle Series for each PRODUCT.
 const allProductsSeries = groupedBarsValues.productNames.map((productName, iProduct) => {
-    const color = ColorHSV( iProduct * 120 )
     const series = chart.addRectangleSeries()
-        .setDefaultStyle((figure) => figure
-            .setFillStyle(new LinearGradientFill({
-                angle: 0,
-                stops: [
-                    { offset: 0, color: color.setA(50) },
-                    { offset: 1, color: color },
-                ]
-            }))
-        )
         .setName(productName)
         .setCursorResultTableFormatter((builder, _, figure) => builder
             .addRow(`${productName} sales`)
@@ -127,4 +114,9 @@ xAxis.setInterval(-edgesMarginX, quartersCount * productsCount * barWidthX + (qu
 
 // Add LegendBox.
 const legend = chart.addLegendBox(LegendBoxBuilders.VerticalLegendBox)
+    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
+    .setAutoDispose({
+        type: 'max-width',
+        maxWidth: 0.30,
+    })
 legend.add(chart)
