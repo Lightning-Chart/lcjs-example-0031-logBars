@@ -55,13 +55,13 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/chartxy.html
-[Linear Gradient Fill style]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/lineargradientfill.html
-[Color HSV factory]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#colorhsv
-[Autocursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/enums/autocursormodes.html
-[UI origins]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#uiorigins
-[LegendBox builders]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#legendboxbuilders
-[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#axistickstrategies
-[Empty line style]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#emptyline
-[Empty fill style]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#emptyfill
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/chartxy.html
+[Linear Gradient Fill style]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/lineargradientfill.html
+[Color HSV factory]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#colorhsv
+[Autocursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/enums/autocursormodes.html
+[UI origins]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#uiorigins
+[LegendBox builders]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#legendboxbuilders
+[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#axistickstrategies
+[Empty line style]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#emptyline
+[Empty fill style]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#emptyfill
 
