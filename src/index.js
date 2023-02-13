@@ -5,16 +5,7 @@
 const lcjs = require('@arction/lcjs')
 
 // Extract required parts from LightningChartJS.
-const {
-    lightningChart,
-    AutoCursorModes,
-    UIOrigins,
-    LegendBoxBuilders,
-    AxisTickStrategies,
-    emptyLine,
-    UIElementBuilders,
-    Themes
-} = lcjs
+const { lightningChart, AutoCursorModes, UIOrigins, LegendBoxBuilders, AxisTickStrategies, emptyLine, UIElementBuilders, Themes } = lcjs
 
 // Example test data.
 const groupedBarsValues = {
@@ -29,51 +20,49 @@ const groupedBarsValues = {
         [526900, 18000, 98500],
         // Quarter 4: product sales.
         [726500, 54600, 13400],
-    ]
+    ],
 }
 const quartersCount = groupedBarsValues.groupNames.length
 const productsCount = groupedBarsValues.productNames.length
 
 // : Plot a Bar Chart using Rectangle Series :
 
-const chart = lightningChart().ChartXY({
-    // theme: Themes.darkGold
-    // Configure Y Axis as logarithmic.
-    defaultAxisY: {
-        type: 'logarithmic',
-        // Use 10 as log base.
-        base: '10',
-    },
-})
+const chart = lightningChart()
+    .ChartXY({
+        // theme: Themes.darkGold
+        // Configure Y Axis as logarithmic.
+        defaultAxisY: {
+            type: 'logarithmic',
+            // Use 10 as log base.
+            base: '10',
+        },
+    })
     .setTitle('Grouped Bars Chart with Logarithmic Y Axis')
     .setAutoCursorMode(AutoCursorModes.onHover)
-    .setAutoCursor((cursor) => cursor
-        .disposeTickMarkerX()
-        .setGridStrokeXStyle(emptyLine)
-        .disposeTickMarkerY()
-        .setGridStrokeYStyle(emptyLine)
-        .disposePointMarker()
-        .setResultTable((resultTable) => resultTable
-            .setOrigin(UIOrigins.Center)
-        )
+    .setAutoCursor((cursor) =>
+        cursor
+            .setTickMarkerXVisible(false)
+            .setGridStrokeXStyle(emptyLine)
+            .setTickMarkerYVisible(false)
+            .setGridStrokeYStyle(emptyLine)
+            .setPointMarkerVisible(false)
+            .setResultTable((resultTable) => resultTable.setOrigin(UIOrigins.Center)),
     )
     .setMouseInteractions(false)
 
-const xAxis = chart.getDefaultAxisX()
-    .setTickStrategy(AxisTickStrategies.Empty)
-    .setMouseInteractions(false)
+const xAxis = chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.Empty).setMouseInteractions(false)
 
-const yAxis = chart.getDefaultAxisY()
-    .setTitle('Product sales (€)')
+const yAxis = chart.getDefaultAxisY().setTitle('Product sales (€)')
 
 // Create one Rectangle Series for each PRODUCT.
 const allProductsSeries = groupedBarsValues.productNames.map((productName, iProduct) => {
-    const series = chart.addRectangleSeries()
+    const series = chart
+        .addRectangleSeries()
         .setName(productName)
-        .setCursorResultTableFormatter((builder, _, figure) => builder
-            .addRow(`${productName} sales`)
-            .addRow(`${figure.getDimensionsTwoPoints().y2} €`)
+        .setCursorResultTableFormatter((builder, _, figure) =>
+            builder.addRow(`${productName} sales`).addRow(`${figure.getDimensionsTwoPoints().y2} €`),
         )
+        .setDefaultStyle((rect) => rect.setStrokeStyle(emptyLine))
     return series
 })
 
@@ -94,7 +83,7 @@ groupedBarsValues.values.forEach((quarterValues, iQuarter) => {
             x1,
             x2,
             y1,
-            y2
+            y2,
         })
     })
 })
@@ -103,20 +92,25 @@ groupedBarsValues.values.forEach((quarterValues, iQuarter) => {
 groupedBarsValues.groupNames.forEach((quarterName, iQuarter) => {
     const x1 = iQuarter * (productsCount * barWidthX + groupsGapX)
     const x2 = x1 + productsCount * barWidthX
-    xAxis.addCustomTick(UIElementBuilders.AxisTick)
-        .setValue((x1+x2) / 2)
+    xAxis
+        .addCustomTick()
+        .setValue((x1 + x2) / 2)
         .setTextFormatter(() => quarterName)
         .setGridStrokeStyle(emptyLine)
 })
 
 // Set X view.
-xAxis.setInterval(-edgesMarginX, quartersCount * productsCount * barWidthX + (quartersCount - 1) * groupsGapX + edgesMarginX, false, true)
+xAxis.setInterval({
+    start: -edgesMarginX,
+    end: quartersCount * productsCount * barWidthX + (quartersCount - 1) * groupsGapX + edgesMarginX,
+})
 
 // Add LegendBox.
-const legend = chart.addLegendBox(LegendBoxBuilders.VerticalLegendBox)
+const legend = chart
+    .addLegendBox(LegendBoxBuilders.VerticalLegendBox)
     // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
     .setAutoDispose({
         type: 'max-width',
-        maxWidth: 0.30,
+        maxWidth: 0.3,
     })
 legend.add(chart)
