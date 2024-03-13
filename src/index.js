@@ -12,7 +12,7 @@ const barChart = lightningChart()
         valueAxis: {
             type: 'logarithmic',
         },
-        // theme: Themes.darkGold
+        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Grouped Bars Chart with Logarithmic Y Axis')
     .setValueLabels(undefined)
