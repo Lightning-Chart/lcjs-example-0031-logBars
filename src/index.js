@@ -2,7 +2,7 @@
  * LightningChart JS Example that showcases logarithmic Y Axis in a Grouped Bars Chart.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Extract required parts from LightningChartJS.
 const { lightningChart, BarChartSorting, LegendBoxBuilders, Themes } = lcjs
@@ -18,10 +18,6 @@ const barChart = lightningChart({
     })
     .setTitle('Grouped Bars Chart with Logarithmic Y Axis')
     .setValueLabels(undefined)
-    .setCursorResultTableFormatter((builder, category, value, bar) => {
-        builder.addRow('Department:', bar.subCategory).addRow('# of employees:', String(value))
-        return builder
-    })
 
 barChart
     .setDataGrouped(
@@ -34,7 +30,7 @@ barChart
     )
     .setSorting(BarChartSorting.Alphabetical)
 
-barChart.valueAxis.setTitle('Product sales (€)')
+barChart.valueAxis.setTitle('Product sales').setUnits('€')
 
 // Add LegendBox.
 const legend = barChart
