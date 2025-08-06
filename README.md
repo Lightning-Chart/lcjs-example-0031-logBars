@@ -29,7 +29,6 @@ Example of visualizing a _Grouped Bars Chart_ with a logarithmic Y Axis.
 * [Color HSV factory]
 * [Autocursor modes]
 * [UI origins]
-* [LegendBox builders]
 * [Axis tick strategies]
 * [Empty line style]
 * [Empty fill style]
@@ -56,13 +55,12 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/ChartXY.html
-[Linear Gradient Fill style]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/classes/LinearGradientFill.html
-[Color HSV factory]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/functions/ColorHSV.html
-[Autocursor modes]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/enums/AutoCursorModes.html
-[UI origins]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/UIOrigins.html
-[LegendBox builders]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/LegendBoxBuilders.html
-[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/AxisTickStrategies.html
-[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/emptyLine.html
-[Empty fill style]: https://lightningchart.com/js-charts/api-documentation/v7.1.0/variables/emptyFill-1.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/ChartXY.html
+[Linear Gradient Fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/LinearGradientFill.html
+[Color HSV factory]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/functions/ColorHSV.html
+[Autocursor modes]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/enums/AutoCursorModes.html
+[UI origins]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/UIOrigins.html
+[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/AxisTickStrategies.html
+[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/emptyLine.html
+[Empty fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/emptyFill-1.html
 
