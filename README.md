@@ -52,15 +52,15 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 [3]: https://stackoverflow.com/questions/tagged/lightningchart
 [4]: https://lightningchart.com/support-services/
 
-© LightningChart Ltd 2009-2022. All rights reserved.
+© LightningChart Ltd 2009-2025. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/ChartXY.html
-[Linear Gradient Fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/LinearGradientFill.html
-[Color HSV factory]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/functions/ColorHSV.html
-[Autocursor modes]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/enums/AutoCursorModes.html
-[UI origins]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/UIOrigins.html
-[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/AxisTickStrategies.html
-[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/emptyLine.html
-[Empty fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/emptyFill-1.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/ChartXY.html
+[Linear Gradient Fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/LinearGradientFill.html
+[Color HSV factory]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/functions/ColorHSV.html
+[Autocursor modes]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/enums/AutoCursorModes.html
+[UI origins]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/UIOrigins.html
+[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/AxisTickStrategies.html
+[Empty line style]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/emptyLine.html
+[Empty fill style]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/emptyFill-1.html
 
