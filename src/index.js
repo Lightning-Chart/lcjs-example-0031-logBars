@@ -22,7 +22,9 @@ const barChart = lightningChart({
 textRenderer: window.lcjsSmallView ? lcjs.htmlTextRenderer : undefined,
     })
     .setTitle('Grouped Bars Chart with Logarithmic Y Axis')
-    .setValueLabels(undefined)
+    .setValueLabels({
+        position: 'inside-bar'
+    })
 
 barChart
     .setDataGrouped(
